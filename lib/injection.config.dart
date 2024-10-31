@@ -43,7 +43,7 @@ extension GetItInjectableX on _i174.GetIt {
       () => registerModule.prefs,
       preResolve: true,
     );
-    gh.lazySingleton<_i519.Client>(
+    gh.singleton<_i519.Client>(
       () => registerModule.client,
       dispose: _i854.disposeDataSource,
     );
