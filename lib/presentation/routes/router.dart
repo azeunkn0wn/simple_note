@@ -9,7 +9,11 @@ part 'router.gr.dart';
 @AutoRouterConfig(replaceInRouteName: 'Page,Route')
 class AppRouter extends RootStackRouter {
   @override
-  RouteType get defaultRouteType => RouteType.material();
+  RouteType get defaultRouteType => RouteType.custom(
+        transitionsBuilder: TransitionsBuilders.fadeIn,
+        durationInMilliseconds: 100,
+        reverseDurationInMilliseconds: 100,
+      );
   @override
   List<AutoRoute> get routes => [
         AutoRoute(path: '/notesList', page: NotesListRoute.page, initial: true),
